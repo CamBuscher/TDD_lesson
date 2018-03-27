@@ -24,5 +24,12 @@ describe('bubbleSort', () => {
     assert.deepEqual(sortedArray, array.sort())
   })
 
+  it('should sort letters in strings', () => {
+    let array = ['a', 'y', 't', 'b', 'f', 'l'];
+    let sortedArray = bubbleSort(array);
+
+    assert.deepEqual(sortedArray, ['a', 'b', 'f', 'l', 't', 'y'])
+  })
+
 })
 
