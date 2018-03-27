@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
-const bubbleSort = require('../lib/bubbleSort.js')
-const arrayGenerator = require('../lib/arrayGenerator.js')
+const {bubbleSort} = require('../lib/bubbleSort.js')
+const {arrayGenerator} = require('../lib/arrayGenerator.js')
 
 describe('bubbleSort', () => {
 
