@@ -13,6 +13,7 @@ describe('insertionSort', () => {
     let array = [24, 21, 123, 344, 9, 5, 10]
     let sortedArray = insertionSort(array);
 
+    console.log(array, sortedArray, array.sort((a, b) => a - b))
     assert.deepEqual(sortedArray, [5, 9, 10, 21, 24, 123, 344])
   })
 
@@ -20,7 +21,7 @@ describe('insertionSort', () => {
     let array = arrayGenerator(10000, 15000);
     let sortedArray = insertionSort(array);
 
-    assert.deepEqual(sortedArray, array.sort())
+    assert.deepEqual(sortedArray, array.sort((a, b) => a - b))
   })
 
   it('should sort letters in strings', () => {

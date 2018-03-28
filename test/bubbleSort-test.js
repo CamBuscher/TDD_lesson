@@ -21,7 +21,7 @@ describe('bubbleSort', () => {
     let array = arrayGenerator(10000, 15000);
     let sortedArray = bubbleSort(array);
 
-    assert.deepEqual(sortedArray, array.sort())
+    assert.deepEqual(sortedArray, array.sort((a, b) => a - b))
   })
 
   it('should sort letters in strings', () => {
