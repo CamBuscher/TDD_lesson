@@ -24,7 +24,7 @@ describe('mergeSort', () => {
   })
 
   it('should sort a large array of numbers', () => {
-    let array = arrayGenerator(10000, 700000);
+    let array = arrayGenerator(10000, 500000);
     let sortedArray = mergeSort(array);
 
     assert.deepEqual(sortedArray, array.sort((a, b) => a - b))
