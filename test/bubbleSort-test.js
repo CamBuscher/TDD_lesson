@@ -9,6 +9,13 @@ describe('bubbleSort', () => {
     assert.isFunction(bubbleSort, true)
   })
 
+  it('should return an array of equal length', () => {
+    let array = arrayGenerator(10000, 700);
+    let sortedArray = bubbleSort(array);
+
+    assert.equal(sortedArray.length, 700)
+  })
+
   it('should sort an array of numbers', () => {
     let array = [24, 21, 123, 344, 9, 5, 10]
 

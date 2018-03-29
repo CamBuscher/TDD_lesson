@@ -9,6 +9,13 @@ describe('mergeSort', () => {
     assert.isFunction(mergeSort, true)
   })
 
+  it('should return an array of equal length', () => {
+    let array = arrayGenerator(10000, 700);
+    let sortedArray = mergeSort(array);
+
+    assert.equal(sortedArray.length, 700)
+  })
+
   it('should sort an array of numbers', () => {
     let array = [24, 21, 123, 344, 9, 5, 10]
     let sortedArray = mergeSort(array);
@@ -17,7 +24,7 @@ describe('mergeSort', () => {
   })
 
   it('should sort a large array of numbers', () => {
-    let array = arrayGenerator(10000, 800000);
+    let array = arrayGenerator(10000, 700000);
     let sortedArray = mergeSort(array);
 
     assert.deepEqual(sortedArray, array.sort((a, b) => a - b))
